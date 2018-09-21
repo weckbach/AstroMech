@@ -2,8 +2,6 @@
 
 AstroMech is an audio protocol for Arduino that is capable of sending small chunks of data via sound. Its an open source pendant to https://chirp.io/. We use this audio protocol to exchange WiFi credentials between a Raspeberry Pi WiFi Access Point and an ESP32 in order to connect to the network with zero configuration efforts.
 
-Todo: Example
-
 ## How it works
 
 AstroMech is a fairly simple one way frequency modulated (FM) audio protocol. There is a sender broadcasting an audio signal that can be consumed by one or multiple receivers.
