@@ -20,7 +20,8 @@ The hardware setup is fairly simple. There is a receiver (Adafruit Feather ESP32
 
 The Adafruit Feather uses the MCP3008 to sample the audio signal of a microphone. Most built-in ADCs aren't sampling fast enough (sampling rate should be at least twice as fast as the highest frequency to detect). This is why most of the time you find yourself including an additional ADC converter like the MCP3008, which is fast enough for our purposes. We have tested it with a SparkFun MEMS microphone (https://www.sparkfun.com/products/9868), but an electred microphone (e.g. https://www.sparkfun.com/products/12758) should suffice as well. The following Fritzing illustrates the hardware setup on the receiver side.
 
-TODO Fritzing
+![Fritzing](https://github.com/weckbach/AstroMech/blob/master/images/astromech.png "Fritzing")
+
 
 ### Sender
 
