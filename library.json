@@ -1,0 +1,21 @@
+{
+  "name": "AstroMech",
+  "keywords": "audio, communication",
+  "description": "Protocol for exchanging small amounts of data over audio.",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/weckbach/AstroMech.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Volker Weckbach",
+      "email": "v.weckbach@hs-mannheim.de",
+      "maintainer": true
+    }
+  ],
+  "version": "0.1.0",
+  "frameworks": "arduino",
+  "platforms": ["espressif8266", "espressif32"]
+}
