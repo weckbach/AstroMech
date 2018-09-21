@@ -81,7 +81,7 @@ AMPLITUDE_THRESHOLD | Determines how high the amplitude of a frequency has to be
 
 ## A note on ultrasonic
 
-Ultrasonic has not been tested yet. Though, it should be fairly straight forward to implement. All the frequencies have to be shifted into the ultrasonic range. The hardware has to be replaced as well. You need to pick a microphone with ultrasonic in the frequency range. Also the speakers must be able to play ultrasonic sounds. I havent't tried to sample the > `40 kHz` with the MCP3008. That has to  be tested as well. I would be glad for any feedback on that topic.
+Ultrasonic has not been tested yet. Though, it should be fairly straight forward to implement. All the frequencies have to be shifted into the ultrasonic range. The hardware has to be replaced as well. You need to pick a microphone with ultrasonic in the frequency range. Also the speakers must be able to play ultrasonic sounds. I haven't tried to sample the > `40 kHz` with the MCP3008. That has to  be tested as well. I would be glad for any feedback on that topic.
 
 ## Known issues
 
