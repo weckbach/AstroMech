@@ -87,7 +87,7 @@ Ultrasonic has not been tested yet. Though, it should be fairly straight forward
 
 ### Start/Stop
 
-With our speaker we experienced that, if the microphone is too close to the speaker, the receiver detects a stop bit right after the start bit. This issue could be mitigated by lowering the priority of stop signals.
+With our speaker we experienced that, if the microphone is too close to the speaker, the receiver detects a stop bit right after the start bit. This issue could be mitigated by lowering the priority of the stop signal.
 
 ### Background noise
 
