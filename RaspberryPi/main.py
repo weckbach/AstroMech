@@ -1,9 +1,10 @@
 import subprocess
 import os
+import sys
 from reedsolo import RSCodec
 from binascii import hexlify
 
-DATA = "hello world"
+DATA = sys.argv[1] if len(sys.argv[1]) > 0 else "hello world"
 DATA_PERIOD_MS = 50
 START_FREQUENCY = 4500
 STOP_FREQUENCY = 5000
