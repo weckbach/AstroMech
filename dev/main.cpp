@@ -1,7 +1,7 @@
 #include "AstroMech.h"
 #include "Adafruit_MCP3008.h"
 
-#define SS 14
+#define SS 15
 #define ANALOG_PIN 0
 #define DEBUG true
 

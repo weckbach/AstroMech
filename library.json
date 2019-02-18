@@ -17,5 +17,8 @@
   ],
   "version": "0.1.0",
   "frameworks": "arduino",
-  "platforms": ["espressif8266", "espressif32"]
+  "platforms": ["espressif8266", "espressif32"],
+  "export": {
+    "exclude": "dev/*"
+  }
 }
