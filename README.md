@@ -35,7 +35,7 @@ As a prerequisite to run the script you need to install *play* for the unix comm
 
 `sudo apt install sox -y && pip install reedsolo`
 
-Run `python RaspberryPi/main.py "This is my message to you"` to emit the string as a sound. If you leave the argument it will emit a "Hello world" sound.
+Run `python RaspberryPi/main.py "This is my message to you"` to emit the string as a sound when pressing the button. If you leave the argument it will emit a "Hello world" sound.
 
 ## Software
 
