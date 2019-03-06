@@ -23,7 +23,19 @@ The Adafruit Feather uses the MCP3008 to sample the audio signal of a microphone
 
 ### Sender
 
-We use a Raspberry Pi with an active speaker connected to cinch connector. It is recommended to use an active speaker since the volume of passive ones might not be loud enough to be reliably detectable. Also the audio driver of the Raspberry Pi can be used in order to create a sine wave signal. This is necessary because a square wave signal can't be detected by the Fourier transform. You can use the little python script under ```RaspberryPi/main.py``` to emit a "Hello world" sound on the Raspberry.
+We use a Raspberry Pi with an active speaker connected to cinch connector. It is recommended to use an active speaker since the volume of passive ones might not be loud enough to be reliably detectable. Also the audio driver of the Raspberry Pi can be used in order to create a sine wave signal. This is necessary because a square wave signal can't be detected by the Fourier transform. 
+
+## Hardware
+
+Simply connect an active speaker to the Raspberry Pi and a push button to GPIO pin 14 and GND.
+
+## Software
+
+As a prerequisite to run the script you need to install *play* for the unix command line and *reedsolo* for python:
+
+`sudo apt install sox -y && pip install reedsolo`
+
+Run `python RaspberryPi/main.py "This is my message to you"` to emit the string as a sound. If you leave the argument it will emit a "Hello world" sound.
 
 ## Software
 
