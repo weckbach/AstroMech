@@ -1,10 +1,12 @@
+from gpiozero import Button
+from signal import pause
 import subprocess
 import os
 import sys
 from reedsolo import RSCodec
 from binascii import hexlify
 
-DATA = sys.argv[1] if len(sys.argv[1]) > 0 else "hello world"
+DATA = sys.argv[1] if len(sys.argv) > 1 else "hello world"
 DATA_PERIOD_MS = 50
 START_FREQUENCY = 4500
 STOP_FREQUENCY = 5000
@@ -28,7 +30,9 @@ NOTES = {
     "f": 2850
 }
 
-def playDataString(data):
+def playDataString():
+    data = DATA
+
     deleteOldWavs()
 
     recordStartChar()
@@ -53,8 +57,8 @@ def playDataString(data):
     playCombinedWav()
 
 def deleteOldWavs():
-    subprocess.call("rm -f sound/*.wav", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-
+    subprocess.call("rm -fr sound", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    subprocess.call("mkdir sound", shell=True)
 def recordStartChar():
     recordSineWave(0, START_FREQUENCY, DATA_PERIOD_MS)
 
@@ -80,4 +84,8 @@ def combineWavs(numberOfWavs):
 def playCombinedWav():
     subprocess.call("play sound/output.wav", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 
-playDataString(DATA)
+button = Button(14)
+
+button.when_pressed = playDataString
+
+pause()
