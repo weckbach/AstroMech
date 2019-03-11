@@ -30,9 +30,18 @@ NOTES = {
     "f": 2850
 }
 
-def playDataString():
-    data = DATA
+FIRST_TIME = True
 
+def playDataString():
+    global FIRST_TIME
+    
+    if FIRST_TIME:
+        generateWave(DATA)
+    
+    playCombinedWav()
+    FIRST_TIME = False
+    
+def generateWave(data):
     deleteOldWavs()
 
     recordStartChar()
@@ -54,7 +63,6 @@ def playDataString():
 
     recordStopChar(index)
     combineWavs(index+1)
-    playCombinedWav()
 
 def deleteOldWavs():
     subprocess.call("rm -fr sound", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
